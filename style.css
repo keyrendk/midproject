@@ -80,16 +80,20 @@ main {
     justify-content: space-between;
     align-items: center;
 }
-#berita-header h1 {
+#berita-header h1, #media-header h1 {
     color: #3e3e3e;
     font-size: 40px;
 }
-#berita-header a {
+#berita-header a, #media-header a {
     background-image:linear-gradient(to right ,#046ac2 ,#22409d) ;
     font-size: 13px;
     padding: 15px 40px;
     color: #fff;
     border-radius: 30px;
+}
+#berita-header a:hover {
+    background-image: linear-gradient(to right, #22409d, #046aca);
+    transform: scale(1.02);
 }
 #konten-berita {
     display: flex;
@@ -120,4 +124,47 @@ main {
 }
 #konten-berita p span {
     color: #b9b9b9;
+}
+#media {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+#media-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 85%;
+    margin: 0 auto;
+}
+#media-header a:hover {
+    background-image: linear-gradient(to right, #22409d, #046aca);
+    transform: scale(1.02);
+}
+#konten-media {
+    padding-left: 100px;
+    display: flex;
+    gap: 15px;
+    overflow: hidden;
+}
+#konten-media div {
+    width: 25%;
+}
+#konten-media img {
+    width: 280px;
+}
+#konten-media p {
+    font-size: 12px;
+    text-align: center;
+    color: #626262;
+}
+#konten-media #play-button {
+    width: 50px;
+    position: relative;
+    top: 250px;
+    left: 115px;
+    transition: transform 0.3s;
+}
+#konten-media #play-button:hover {
+    transform: scale(1.1);
 }
