@@ -84,7 +84,7 @@ main {
     color: #3e3e3e;
     font-size: 40px;
 }
-#berita-header a, #media-header a {
+#berita-header a, #media-header a, #sustain a {
     background-image:linear-gradient(to right ,#046ac2 ,#22409d) ;
     font-size: 13px;
     padding: 15px 40px;
@@ -167,4 +167,15 @@ main {
 }
 #konten-media #play-button:hover {
     transform: scale(1.1);
+}
+#sustain {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+#sustain a {
+    position: relative;
+    width: 180px;
+    bottom: 80px;
 }
