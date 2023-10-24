@@ -161,7 +161,7 @@ main {
 #konten-media #play-button {
     width: 50px;
     position: relative;
-    top: 250px;
+    top: 120px;
     left: 115px;
     transition: transform 0.3s;
 }
