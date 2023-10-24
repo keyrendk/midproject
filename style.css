@@ -55,4 +55,14 @@
     color: #8eb3dd;
     font-size: 14px;
 }
+#navbar a:hover {
+    color: #fff;
+}
+/* Main Section */
+main {
+    width: 100%;
+}
+#cimoryimg {
+    width: 100%;
+}
 
