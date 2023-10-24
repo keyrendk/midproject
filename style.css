@@ -61,8 +61,63 @@
 /* Main Section */
 main {
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
 }
 #cimoryimg {
     width: 100%;
 }
-
+#berita {
+    width: 85%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+#berita-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#berita-header h1 {
+    color: #3e3e3e;
+    font-size: 40px;
+}
+#berita-header a {
+    background-image:linear-gradient(to right ,#046ac2 ,#22409d) ;
+    font-size: 13px;
+    padding: 15px 40px;
+    color: #fff;
+    border-radius: 30px;
+}
+#konten-berita {
+    display: flex;
+    gap: 30px;
+}
+#konten-berita div {
+    flex: 1;
+}
+.konten-berita-border {
+    border: 1px solid #eaeaea;
+    border-radius: 5px;
+    transform: transform 0.3s;
+}
+.konten-berita-border:hover {
+    transform: scale(1.1);
+}
+.konten-berita-img {
+    height: 200px;
+    overflow: hidden;
+}
+#konten-berita img {
+    width: 100%;
+}
+#konten-berita p {
+    padding: 40px 20px;
+    color: #000;
+    font-size: 13px;
+}
+#konten-berita p span {
+    color: #b9b9b9;
+}
