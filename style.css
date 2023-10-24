@@ -97,10 +97,11 @@ main {
 }
 #konten-berita {
     display: flex;
+    flex-wrap: wrap;
     gap: 30px;
 }
 #konten-berita div {
-    flex: 1;
+    width: 30%;
 }
 .konten-berita-border {
     border: 1px solid #eaeaea;
@@ -110,7 +111,8 @@ main {
 .konten-berita-border:hover {
     transform: scale(1.1);
 }
-.konten-berita-img {
+#konten-berita .konten-berita-img {
+    width: 100%;
     height: 200px;
     overflow: hidden;
 }
@@ -120,7 +122,7 @@ main {
 #konten-berita p {
     padding: 40px 20px;
     color: #000;
-    font-size: 13px;
+    font-size: 15px;
 }
 #konten-berita p span {
     color: #b9b9b9;
