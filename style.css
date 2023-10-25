@@ -295,6 +295,51 @@ main {
     content: ": ";
     font-weight: bolder;
 }
+/* Main section - free content */
+#main-free-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 0px;
+}
+#gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    padding: 30px;
+    background-color: #fe93b7;
+    margin: 30px auto;
+}
+#gallery h1 {
+    text-align: center;
+    color: #eef0f0;
+}
+#gallery ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 20px;
+}
+#gallery li {
+    width: 30%;
+}
+#gallery img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 20px;
+    transition: transform 0.3s;
+}
+#gallery img:hover {
+    transform: scale(1.05);
+}
+#gallery p {
+    width: 100%;
+    font-size: 11px;
+    text-align: center;
+    color: #4c555a;
+}
 /* Footer */
 footer {
     width: 100%;
