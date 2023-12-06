@@ -202,45 +202,26 @@ main {
 }
 /* main section - contact us */
 #main-contact-us {
-    display: flex;
-    flex-direction: row;
     margin: 30px 0px;
-    gap: 0px;
     background-color: #e7c6a1;
 }
 #contact img {
     width: 280px;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     border-radius: 20px;
 }
 #contact, #contact-form {
-    flex: 1;
     padding: 50px 30px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     gap: 20px;
 }
 #contact-form {
     background-color: #e2cfb8;
 }
 #contact-form form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     gap: 20px;
 }
 input[type=text], input[type=email], input[type=password] {
     padding: 10px 20px;
     border-radius: 10px;
-}
-#religion-form, #hobbies-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 textarea {
     width: 199px;
