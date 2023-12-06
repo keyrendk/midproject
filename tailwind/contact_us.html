@@ -17,52 +17,6 @@
         rel="stylesheet">
     <title>CONTACT US</title>
 </head>
-<script>
-    function validateForm() {
-        let fullname = document.forms["myForm"]["fullname"].value
-        let email = document.forms["myForm"]["email"].value
-        let username = document.forms["myForm"]["username"].value
-        let password = document.forms["myForm"]["password"].value
-        let gender = document.forms["myForm"]["gender"].value
-        let religion = document.forms["myForm"]["religion"].value
-        let address = document.forms["myForm"]["address"].value
-        let hobbies = document.querySelectorAll('input[name="hobbies[]"]:checked');
-        if (fullname == "") {
-            alert("Full Name is not filled");
-            return false;
-        }
-        if (email == "") {
-            alert("Email is not filled");
-            return false;
-        }
-        if (username == "") {
-            alert("User Name is not filled");
-            return false;
-        }
-        if (password == "") {
-            alert("Password is not filled");
-            return false;
-        }
-        if (gender == "") {
-            alert("Gender is not filled");
-            return false;
-        }
-        if (religion == "default") {
-            alert("Religion is not filled");
-            return false;
-        }
-        if(address == ""){
-            alert("Adress is not filled");
-            return false;
-        }
-        if(hobbies.length == 0){
-            alert("Hobbies is not filled ");
-            return false;
-        }
-    }
-
-</script>
-
 <body class="border-box font-['Poppins','sans-serif'] no-underline list-none w-full">
     <header class="flex justify-between h-[100px] bg-gradient-to-r from-[#016fc6] to-[#253c98] px-[100px]">
         <img class="mt-[30px] ml-[21px] w-[96px] h-[50px]" src="logo_cimory.png" alt="logo cimory">
@@ -92,10 +46,10 @@
         </div>
     </header>
     <!-- Main Section -->
-    <main id="main-contact-us">
-        <div id="contact">
-            <h1>About Us</h1>
-            <img src="hub-dk.jpg" alt="hubungi deca akan membantu">
+    <main id="main-contact-us" class="flex flex-row my-[30px] bg-[#e7c6a1]">
+        <div id="contact" class="w-[50%] py-[50px] px-[30px] flex flex-col items-center gap-5">
+            <h1 class="text-3xl font-bold">About Us</h1>
+            <img class="w-[280px] overflow-hidden flex flex-col items-center rounded-[20px]" src="hub-dk.jpg" alt="hubungi deca akan membantu">
             <p>
                 Halo, nama saya Deca. Saya saat ini berkuliah tingkat 3 di Universitas Advent Indonesia. Saya memiliki
                 minat yang kuat dalam pengembangan web.
@@ -105,16 +59,16 @@
             </p>
         </div>
 
-        <div id="contact-form">
-            <h1>Contact Us</h1>
-                <form name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
-                <input type="text" id="fullname" name="fullname" placeholder="Your fullname...">
+        <div id="contact-form" class="w-[50%] py-[50px] px-[30px] flex flex-col items-center gap-5 bg-[#e2cfb8]">
+            <h1 class="text-3xl font-bold">Contact Us</h1>
+                <form class="flex flex-col items-center gap-5" name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
+                <input class="py-2.5 px-5 rounded-[10px] border-2 border-solid border-black" type="text" id="fullname" name="fullname" placeholder="Your fullname...">
 
-                <input type="email" id="email" name="email" placeholder="Your email...">
+                <input class="py-2.5 px-5 rounded-[10px] border-2 border-solid border-black" type="email" id="email" name="email" placeholder="Your email...">
 
-                <input type="text" id="username" name="username" placeholder="Username">
+                <input class="py-2.5 px-5 rounded-[10px] border-2 border-solid border-black" type="text" id="username" name="username" placeholder="Username">
 
-                <input type="password" id="password" name="password" placeholder="Password">
+                <input class="py-2.5 px-5 rounded-[10px] border-2 border-solid border-black" type="password" id="password" name="password" placeholder="Password">
 
                 <div id="gender">
                     <input type="radio" name="gender" id="male" value="Male">
@@ -123,9 +77,9 @@
                     <label for="female">Female</label>
                 </div>
 
-                <div id="religion-form">
+                <div id="religion-form" class="flex flex-col items-center">
                     <label for="religion">Religion</label>
-                    <select name="religion" id="religion">
+                    <select name="religion" id="religion" class="py-2.5 px-5 rounded-[10px]">
                         <option value="default">Select Religion</option>
                         <option value="Islam">Islam</option>
                         <option value="Christian">Christian</option>
@@ -135,34 +89,54 @@
                     </select>
                 </div>
 
-                <textarea name="address" id="address"></textarea>
+                <textarea name="address" id="address" class="w-[199px] h-[50px] rounded-[10px]"></textarea>
 
-                <div id="hobbies-form">
+                <div id="hobbies-form" class="flex flex-col items-center">
                     <p>Hobbies</p>
-                    <div id="hobbies">
-                        <input type="checkbox" id="drawing" name="hobbies[]" value="Drawing">
-                        <label for="drawing">Drawing</label>
-                        <input type="checkbox" id="reading" name="hobbies[]" value="Reading">
-                        <label for="reading">Reading</label>
-                        <input type="checkbox" id="sport" name="hobbies[]" value="Sport">
-                        <label for="sport">Sport</label>
-                        <input type="checkbox" id="music" name="hobbies[]" value="Music">
-                        <label for="music">Music</label>
-                        <input type="checkbox" id="writing" name="hobbies[]" value="Writing">
-                        <label for="writing">writing</label>
-                        <input type="checkbox" id="cooking" name="hobbies[]" value="Cooking">
-                        <label for="cooking">Cooking</label>
-                        <input type="checkbox" id="singing" name="hobbies[]" value="Singing">
-                        <label for="singing">Singing</label>
-                        <input type="checkbox" id="traveling" name="hobbies[]" value="Traveling">
-                        <label for="traveling">Traveling</label>
-                        <input type="checkbox" id="hiking" name="hobbies[]" value="Hiking">
-                        <label for="hiking">Hiking</label>
-                        <input type="checkbox" id="dancing" name="hobbies[]" value="Dancing">
-                        <label for="dancing">Dancing</label>
+                    <div id="hobbies" class="flex flex-wrap">
+                        <div class="basis-1/5">
+                            <input type="checkbox" id="drawing" name="hobbies[]" value="Drawing">
+                            <label for="drawing">Drawing</label>
+                        </div>
+                        <div class="basis-1/5">
+                            <input type="checkbox" id="reading" name="hobbies[]" value="Reading">
+                            <label for="reading">Reading</label>
+                        </div>    
+                        <div class="basis-1/5">
+                            <input type="checkbox" id="sport" name="hobbies[]" value="Sport">
+                            <label for="sport">Sport</label>
+                        </div>
+                        <div class="basis-1/5">
+                            <input type="checkbox" id="music" name="hobbies[]" value="Music">
+                            <label for="music">Music</label>
+                        </div>    
+                        <div class="basis-1/5">
+                            <input type="checkbox" id="writing" name="hobbies[]" value="Writing">
+                            <label for="writing">writing</label>
+                        </div>    
+                        <div class="basis-1/5">
+                            <input type="checkbox" id="cooking" name="hobbies[]" value="Cooking">
+                            <label for="cooking">Cooking</label>
+                        </div>    
+                        <div class="basis-1/5">
+                            <input type="checkbox" id="singing" name="hobbies[]" value="Singing">
+                            <label for="singing">Singing</label>
+                        </div>    
+                        <div class="basis-1/5">
+                            <input type="checkbox" id="traveling" name="hobbies[]" value="Traveling">
+                            <label for="traveling">Traveling</label>
+                        </div>    
+                        <div class="basis-1/5">
+                            <input type="checkbox" id="hiking" name="hobbies[]" value="Hiking">
+                            <label for="hiking">Hiking</label>
+                        </div>    
+                        <div class="basis-1/5">
+                            <input type="checkbox" id="dancing" name="hobbies[]" value="Dancing">
+                            <label for="dancing">Dancing</label>
+                        </div>    
                     </div>
                 </div>
-                <button type="submit">Save</button>
+                <button type="submit" class="bg-[#c18346] py-2.5 px-10 rounded-[20px] border-2 border-black border-solid">Save</button>
             </form>
         </div>
     </main>
@@ -288,6 +262,51 @@
             </div>
         </div>
     </footer>
+    <script>
+        function validateForm() {
+            let fullname = document.forms["myForm"]["fullname"].value
+            let email = document.forms["myForm"]["email"].value
+            let username = document.forms["myForm"]["username"].value
+            let password = document.forms["myForm"]["password"].value
+            let gender = document.forms["myForm"]["gender"].value
+            let religion = document.forms["myForm"]["religion"].value
+            let address = document.forms["myForm"]["address"].value
+            let hobbies = document.querySelectorAll('input[name="hobbies[]"]:checked');
+            if (fullname == "") {
+                alert("Full Name is not filled");
+                return false;
+            }
+            if (email == "") {
+                alert("Email is not filled");
+                return false;
+            }
+            if (username == "") {
+                alert("User Name is not filled");
+                return false;
+            }
+            if (password == "") {
+                alert("Password is not filled");
+                return false;
+            }
+            if (gender == "") {
+                alert("Gender is not filled");
+                return false;
+            }
+            if (religion == "default") {
+                alert("Religion is not filled");
+                return false;
+            }
+            if(address == ""){
+                alert("Adress is not filled");
+                return false;
+            }
+            if(hobbies.length == 0){
+                alert("Hobbies is not filled ");
+                return false;
+            }
+        }
+    
+    </script>
 </body>
 
 </html>
