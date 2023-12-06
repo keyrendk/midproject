@@ -471,3 +471,13 @@ footer {
     font-size: 11px;
     color: #fff;
 }
+#copyright div {
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+#copyright div a {
+    color: #fff;
+}
