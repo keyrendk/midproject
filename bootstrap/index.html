@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.png">
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <title>HOME</title> 
+</head>
+<body class="w-100">
+    <!-- Header -->
+    <header class="d-flex justify-content-between">
+        <img src="logo_cimory.png" alt="logo cimory">
+        <div id="navbar-lang" class="d-flex flex-column">
+            <div id="lang" class="d-flex justify-content-end">
+                <div>
+                    <img src="share.png" alt="logo share">
+                </div>
+                <div>
+                    <a class="text-white fw-bold text-decoration-none" href="https://cimory.com/index.php?lang=en&">EN</a>
+                </div>                 
+            </div>
+            <div id="navbar" class="d-flex">
+                <div>
+                    <a class="fs-sm text-decoration-none" href="index.html">HOME</a>
+                </div>
+                <div>
+                    <a class="fs-sm text-decoration-none" href="biodata.html">BIODATA</a>
+                </div>
+                <div>
+                    <a class="fs-sm text-decoration-none" href="contact_us.html">CONTACT US</a>
+                </div>
+                <div>
+                    <a class="fs-sm text-decoration-none" href="free.html">FREE CONTENT</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Section -->
+    <main class="d-flex flex-column">
+        <!-- Carousel -->
+        <div id="demo" class="carousel slide" data-bs-ride="carousel">
+
+            <!-- The slideshow/carousel -->
+            <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="geser1.jpg" class="d-block" style="width:100%">
+            </div>
+            <div class="carousel-item">
+                <img src="geser2.jpg" class="d-block" style="width:100%">
+            </div>
+            <div class="carousel-item">
+                <img src="geser3.jpg"  class="d-block" style="width:100%">
+            </div>
+            <div class="carousel-item">
+                <img src="geser4.jpg" class="d-block" style="width:100%">
+            </div>
+            <div class="carousel-item">
+                <img src="cimory.jpg"  class="d-block" style="width:100%">
+            </div>
+            </div>
+            
+            <!-- Left and right controls/icons -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+            </button>
+        </div>
+        <div id="berita" class="d-flex mx-auto flex-column">
+            <div id="berita-header" class="d-flex justify-content-between align-items-center">
+                <h1>Berita</h1>
+                <a class="text-decoration-none" href="https://cimory.com/news.php">Lihat Semua</a>
+            </div>
+            <div id="konten-berita" class="d-flex flex-wrap">
+                <div class="konten-berita-border border rounded-1">
+                    <a class="text-decoration-none" href="https://cimory.com/news-detail.php?news_id=13">
+                        <div class="konten-berita-img overflow-hidden">
+                            <img src="news1.png" alt="berita cimory pertama">
+                        </div>
+                        <p class="text-black">Cimory Mengumumkan Investasi Strategis dari General Atlantic untuk Mendukung Pertumbuhan Bisnis sebagai Produsen Susu dan Makanan Terkemuka di Indonesia <br><span>10 Jan 2023</span></p>
+                    </a>
+                </div>
+                <div class="border rounded-1 konten-berita-border">
+                    <a class="text-decoration-none" href="https://cimory.com/news-detail.php?news_id=12">
+                        <div class="konten-berita-img overflow-hidden">
+                            <img src="news2.png" alt="berita cimory ke dua">
+                        </div>
+                        <p class="text-black">Cimory Catatkan Pertumbuhan Laba Bersih 346% Jadi Rp 790 Miliar pada tahun 2021 <br><span>25 Mar 2022</span></p>
+                    </a>
+                </div>
+                <div class="border rounded-1 konten-berita-border">
+                    <a class="text-decoration-none" href="https://cimory.com/news-detail.php?news_id=4">
+                        <div class="konten-berita-img overflow-hidden">
+                            <img src="piala.jpg" alt="bapak memegang piala">
+                        </div>
+                        <p class="text-black">Bambang Sutantio, Chairman Cimory Group menerima Food Manufacturing Entrepreneur Award <br><span>09 Jan 2022</span></p>
+                    </a>
+                </div>
+                <div class="border rounded-1 konten-berita-border">
+                    <a class="text-decoration-none" href="https://cimory.com/news-detail.php?news_id=11">
+                        <div class="konten-berita-img overflow-hidden">
+                            <img src="rapatbpkbpk.jpg" alt="perkumpulan bapak bapak">
+                        </div>
+                        <p class="text-black">Upaya Tingkatkan Kualitas Peternakan Sapi Perah di Indonesia, Cimory Beri Pelatihan Kepada 1000 Peternak Wanita <br><span>20 Dec 2021</span></p>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div id="media" class="w-100 d-flex flex-column">
+            <div id="media-header" class="d-flex justify-content-between align-items-center mx-auto">
+                <h1>Media</h1>
+                <a class="text-decoration-none" href="https://cimory.com/media.php">Lihat Semua</a>
+            </div>
+            <div id="konten-media" class="d-flex overflow-hidden">
+                <div class="w-25">
+                    <img id="play-button" class="position-relative" src="play-button.png">
+                    <img src="media1.png" alt="gambar 1">
+                    <p class="fs-6 text-center">CIMORY Indonesia - Company Profile</p>
+                </div>
+                <div class="w-25">
+                    <img id="play-button" class="position-relative" src="play-button.png">
+                    <img src="media2.jpg" alt="gambar 2">
+                    <p class="fs-6 text-center">Baru, pembukaan Cimory dairyland Prigen!</p>
+                </div>
+                <div class="w-25">
+                    <img id="play-button" class="position-relative" src="play-button.png">
+                    <img src="media3.jpg" alt="gambar 3">
+                    <p class="fs-6 text-center">Tiktok #Squeezeyuk Challenges @Anesya</p>
+                </div>
+                <div class="w-25">
+                    <img id="play-button" class="position-relative" src="play-button.png">
+                    <img src="media4.jpg" alt="gambar 4">
+                    <p class="fs-6 text-center">Tiktok #Cucokcucucimory @Baldybrobryzxz</p>
+                </div>
+                <div class="w-25">
+                    <img id="play-button" class="position-relative" src="play-button.png">
+                    <img src="media5.jpg" alt="gambar 5">
+                    <p class="fs-6 text-center">Tiktok #Cobaincimoryceger Challenges @Clarakangbakso</p>
+                </div>
+                <div class="w-25">
+                    <img id="play-button" class="position-relative" src="play-button.png">
+                    <img src="media6.jpg" alt="gambar 6">
+                    <p class="fs-6 text-center">Tiktok #Cobaincimoryceger Challenges @mieke</p>
+                </div>
+                <div class="w-25">
+                    <img id="play-button" class="position-relative" src="play-button.png">
+                    <img src="media7.jpg" alt="gambar 7">
+                    <p class="fs-6 text-center">Tiktok #Cobaincimoryceger Challenges @Baldybrobryzxz</p>
+                </div>
+                <div class="w-25">
+                    <img id="play-button" class="position-relative" src="play-button.png">
+                    <img src="media8.jpg" alt="gambar 8">
+                    <p class="fs-6 text-center">Introduction Cimory UHT Milk Marie Biscuit!</p>
+                </div>
+            </div>
+        </div>
+        <div id="sustain" class="d-flex flex-column text-center align-items-center">
+            <img class="w-100" src="sustain_development_bg_id.jpg" alt="gambar sapi sustain development">
+            <a class="position-relative text-decoration-none" id="lihat-detail" href="https://cimory.com/sustainability.php">Lihat Detail</a>
+        </div>
+        <div id="prodak-kami" class="w-100 d-flex flex-column">
+            <div id="prodak-kami-header" class="d-flex flex-column text-center">
+                <h1 class="fs-1 fw-bold">Produk Kami</h1>
+                <div class="d-flex mx-auto">
+                    <a class="fs-6 fw-bold text-decoration-none" id="produksusu" href="https://cimory.com/#tab-0">Produk Susu</a>
+                    <a class="fs-6 fw-bold text-decoration-none" id="mknkonsumen" href="https://cimory.com/#tab-1">Makanan Konsumen</a>
+                </div>
+            </div>
+            <img src="bottombanner_dairy.jpg" alt="produk susu kami">
+            <div id="prosusu" class="d-flex flex-column text-center">
+                <h2>Produk Susu</h2>
+                <p class="fs-6">Cimory Milk dan yogurt terbuat dari susu segar premium, diproses dan dikemas secara higienis menggunakan teknologi modern. Ini memiliki banyak pilihan rasa, dan sangat bergizi untuk Anda!</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="w-100 d-flex flex-column">
+        <div id="konten-footer" class="d-flex">
+            <div id="footer-logo" class="d-flex justify-content-end">
+                <img src="logo_cimory.png" alt="logo cimory">
+            </div>
+            <div id="konten" class="d-flex">
+                <div id="home-keberlanjutan" class="d-flex flex-column">
+                    <a class="text-decoration-none" href="https://cimory.com/index.php">
+                        <h4>Home</h4>
+                    </a>
+                    <div class="d-flex flex-column">
+                        <h4>Keberlanjutan</h4>
+                        <ul>
+                            <li>
+                                <a class="text-decoration-none" href="https://cimory.com/sustainability.php#tab-1">Energi & Lingkungan</a>
+                            </li>
+                            <li>
+                                <a class="text-decoration-none" href="https://cimory.com/sustainability.php#tab-2">Ekonomi Lokal</a>
+                            </li>
+                            <li>
+                                <a class="text-decoration-none" href="https://cimory.com/sustainability.php#tab-3">Pengembangan Komunitas</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="perusahaan" class="d-flex flex-column">
+                    <h4>Perusahaan</h4>
+                    <ul>
+                        <li>
+                            <a class="text-decoration-none" href="https://cimory.com/vision-mission.php">Visi Misi</a>
+                        </li>
+                        <li>
+                            <a class="text-decoration-none" href="https://cimory.com/our-leadership.php">Kepemimpinan Kami</a>
+                        </li>
+                        <li>
+                            <a class="text-decoration-none" href="https://cimory.com/our-history.php">Sejarah Perusahaan</a>
+                        </li>
+                        <li>
+                            <a class="text-decoration-none" href="https://cimory.com/corporate-governance.php">Tata Kelola Perusahaan</a>
+                        </li>
+                        <li>
+                            <a class="text-decoration-none" href="https://cimory.com/sub-company.php">Grup Perusahaan</a>
+                        </li>
+                        <li>
+                            <a class="text-decoration-none" href="https://cimory.com/development-strategy.php">Pengembangan Strategi</a>
+                        </li>
+                        <li>
+                            <a class="text-decoration-none" href="https://cimory.com/audit-comittee.php">Komite Audit</a>
+                        </li>
+                    </ul>
+                </div>
+                <div id="produk-investor" class="d-flex flex-column">
+                    <div class="d-flex flex-column">
+                        <h4>Produk</h4>
+                        <ul>
+                            <li>
+                                <a class="text-decoration-none" href="https://cimory.com/our-product.php#tab-1">Produk Susu</a>
+                            </li>
+                            <li>
+                                <a class="text-decoration-none" href="https://cimory.com/our-product.php#tab-2">Makanan Konsumen</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="d-flex flex-column">
+                        <h4>Investor</h4>
+                        <ul>
+                            <li>
+                                <a class="text-decoration-none" href="https://cimory.com/general-meeting.php">Rapat Umum Tahunan</a>
+                            </li>
+                            <li>
+                                <a class="text-decoration-none" href="https://cimory.com/financial-report.php">Laporan Keuangan</a>
+                            </li>
+                            <li>
+                                <a class="text-decoration-none" href="https://cimory.com/annual-reports.php">Laporan Tahunan</a>
+                            </li>
+                            <li>
+                                <a class="text-decoration-none" href="https://cimory.com/investor-contact.php">Kontak IR</a>
+                            </li>
+                            <li>
+                                <a class="text-decoration-none" href="https://cimory.com/investor-prospectus.php">Prospektus</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="pariwisata-media-kontak" class="d-flex flex-column">
+                    <a class="text-decoration-none" href=""><h4>Pariwisata</h4></a>
+                    <div class="d-flex flex-column">
+                        <h4>Media</h4>
+                        <ul>
+                            <li>
+                                <a class="text-decoration-none" href="https://cimory.com/news.php">Berita</a>
+                            </li>
+                            <li>
+                                <a class="text-decoration-none" href="https://cimory.com/media.php">Media</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="d-flex flex-column">
+                        <h4>Kontak</h4>
+                        <ul>
+                            <li>
+                                <a class="text-decoration-none" href="https://cimory.com/contact-us.php">Alamat</a>
+                            </li>
+                            <li>
+                                <a class="text-decoration-none" href="https://cimory.com/career.php">Karir</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="copyright">
+            <p class="text-center text-white">&copy; 2021 PT Cisarua Mountain Dairy (Cimory) All rights reserved.</p>
+            <div class="d-flex text-white justify-content-center align-items-center">
+                <a class="text-decoration-none text-center text-white" href="https://unai.edu">UNAI website</a>
+                &middot;
+                <a class="text-decoration-none text-center text-white" href="https://fti.unai.edu">FTI UNAI</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
