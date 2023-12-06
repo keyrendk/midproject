@@ -1,20 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <!-- style -->
-     <link rel="stylesheet" href="style.css">
+    <!-- style -->
+    <link rel="stylesheet" href="style.css">
 
-     <!-- favicon -->
+    <!-- favicon -->
     <link rel="icon" type="image/x-icon" href="favicon.png">
 
-     <!-- Font -->
-     <link rel="preconnect" href="https://fonts.googleapis.com">
-     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
     <title>CONTACT US</title>
 </head>
+<script>
+    function validateForm() {
+        let fullname = document.forms["myForm"]["fullname"].value
+        let email = document.forms["myForm"]["email"].value
+        let username = document.forms["myForm"]["username"].value
+        let password = document.forms["myForm"]["password"].value
+        let gender = document.forms["myForm"]["gender"].value
+        let religion = document.forms["myForm"]["religion"].value
+        let address = document.forms["myForm"]["address"].value
+        let hobbies = document.querySelectorAll('input[name="hobbies[]"]:checked');
+        if (fullname == "") {
+            alert("Full Name is not filled");
+            return false;
+        }
+        if (email == "") {
+            alert("Email is not filled");
+            return false;
+        }
+        if (username == "") {
+            alert("User Name is not filled");
+            return false;
+        }
+        if (password == "") {
+            alert("Password is not filled");
+            return false;
+        }
+        if (gender == "") {
+            alert("Gender is not filled");
+            return false;
+        }
+        if (religion == "default") {
+            alert("Religion is not filled");
+            return false;
+        }
+        if(address == ""){
+            alert("Adress is not filled");
+            return false;
+        }
+        if(hobbies.length == 0){
+            alert("Hobbies is not filled ");
+            return false;
+        }
+    }
+
+</script>
+
 <body>
     <header>
         <img src="logo_cimory.png" alt="logo cimory">
@@ -25,7 +73,7 @@
                 </div>
                 <div>
                     <a href="https://cimory.com/index.php?lang=en&">EN</a>
-                </div>                 
+                </div>
             </div>
             <div id="navbar">
                 <div>
@@ -48,16 +96,18 @@
         <div id="contact">
             <h1>About Us</h1>
             <img src="hub-dk.jpg" alt="hubungi deca akan membantu">
-            <p> 
-                Halo, nama saya Deca. Saya saat ini berkuliah tingkat 3 di Universitas Advent Indonesia. Saya memiliki minat yang kuat dalam pengembangan web. 
-                Selama kuliah, saya telah terlibat dalam berbagai kegiatan ekstrakurikuler yang menarik. Saya bersemangat untuk terus belajar dan berkembang di lingkungan universitas,
+            <p>
+                Halo, nama saya Deca. Saya saat ini berkuliah tingkat 3 di Universitas Advent Indonesia. Saya memiliki
+                minat yang kuat dalam pengembangan web.
+                Selama kuliah, saya telah terlibat dalam berbagai kegiatan ekstrakurikuler yang menarik. Saya
+                bersemangat untuk terus belajar dan berkembang di lingkungan universitas,
                 serta berharap dapat berkontribusi dalam berbagai cara selama masa studi saya di UNAI.
             </p>
         </div>
-        
+
         <div id="contact-form">
             <h1>Contact Us</h1>
-            <form>
+                <form name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
                 <input type="text" id="fullname" name="fullname" placeholder="Your fullname...">
 
                 <input type="email" id="email" name="email" placeholder="Your email...">
@@ -72,10 +122,11 @@
                     <input type="radio" name="gender" id="female" value="Female">
                     <label for="female">Female</label>
                 </div>
-                
+
                 <div id="religion-form">
                     <label for="religion">Religion</label>
                     <select name="religion" id="religion">
+                        <option value="default">Select Religion</option>
                         <option value="Islam">Islam</option>
                         <option value="Christian">Christian</option>
                         <option value="Hindu">Hindu</option>
@@ -84,33 +135,31 @@
                     </select>
                 </div>
 
-                <textarea name="address" id="address">Address</textarea>
+                <textarea name="address" id="address"></textarea>
 
                 <div id="hobbies-form">
                     <p>Hobbies</p>
                     <div id="hobbies">
-                        <input type="checkbox" id="drawing" name="drawing" value="Drawing">
+                        <input type="checkbox" id="drawing" name="hobbies[]" value="Drawing">
                         <label for="drawing">Drawing</label>
-                        <input type="checkbox" id="reading" name="reading" value="Reading">
+                        <input type="checkbox" id="reading" name="hobbies[]" value="Reading">
                         <label for="reading">Reading</label>
-                        <input type="checkbox" id="sport" name="sport" value="Sport">
+                        <input type="checkbox" id="sport" name="hobbies[]" value="Sport">
                         <label for="sport">Sport</label>
-                        <input type="checkbox" id="music" name="music" value="Music">
+                        <input type="checkbox" id="music" name="hobbies[]" value="Music">
                         <label for="music">Music</label>
-                        <input type="checkbox" id="writing" name="writing" value="Writing">
+                        <input type="checkbox" id="writing" name="hobbies[]" value="Writing">
                         <label for="writing">writing</label>
-                        <input type="checkbox" id="cooking" name="cooking" value="Cooking">
+                        <input type="checkbox" id="cooking" name="hobbies[]" value="Cooking">
                         <label for="cooking">Cooking</label>
-                        <input type="checkbox" id="singing" name="singing" value="Singing">
+                        <input type="checkbox" id="singing" name="hobbies[]" value="Singing">
                         <label for="singing">Singing</label>
-                        <input type="checkbox" id="traveling" name="traveling" value="Traveling">
-                        <label for="traveling">Traveling</label> 
-                        <input type="checkbox" id="hiking" name="hiking" value="Hiking">
+                        <input type="checkbox" id="traveling" name="hobbies[]" value="Traveling">
+                        <label for="traveling">Traveling</label>
+                        <input type="checkbox" id="hiking" name="hobbies[]" value="Hiking">
                         <label for="hiking">Hiking</label>
-                        <input type="checkbox" id="dancing" name="dancing" value="Dancing">
+                        <input type="checkbox" id="dancing" name="hobbies[]" value="Dancing">
                         <label for="dancing">Dancing</label>
-                        <input type="checkbox" id="other" name="other" value="Other">
-                        <label for="other">Other</label>
                     </div>
                 </div>
                 <button type="submit">Save</button>
@@ -124,7 +173,7 @@
                 <img src="logo_cimory.png" alt="logo cimory">
             </div>
             <div id="konten">
-                <div id="home-keberlanjutan" >
+                <div id="home-keberlanjutan">
                     <a href="https://cimory.com/index.php">
                         <h4>Home</h4>
                     </a>
@@ -169,7 +218,7 @@
                         </li>
                     </ul>
                 </div>
-                <div id="produk-investor" >
+                <div id="produk-investor">
                     <div>
                         <h4>Produk</h4>
                         <ul>
@@ -203,7 +252,9 @@
                     </div>
                 </div>
                 <div id="pariwisata-media-kontak">
-                    <a href=""><h4>Pariwisata</h4></a>
+                    <a href="">
+                        <h4>Pariwisata</h4>
+                    </a>
                     <div>
                         <h4>Media</h4>
                         <ul>
@@ -233,5 +284,7 @@
             <p>&copy; 2021 PT Cisarua Mountain Dairy (Cimory) All rights reserved.</p>
         </div>
     </footer>
+
 </body>
+
 </html>

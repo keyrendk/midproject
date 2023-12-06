@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- tailwind css -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.png">
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <title>CONTACT US</title>
+</head>
+<script>
+    function validateForm() {
+        let fullname = document.forms["myForm"]["fullname"].value
+        let email = document.forms["myForm"]["email"].value
+        let username = document.forms["myForm"]["username"].value
+        let password = document.forms["myForm"]["password"].value
+        let gender = document.forms["myForm"]["gender"].value
+        let religion = document.forms["myForm"]["religion"].value
+        let address = document.forms["myForm"]["address"].value
+        let hobbies = document.querySelectorAll('input[name="hobbies[]"]:checked');
+        if (fullname == "") {
+            alert("Full Name is not filled");
+            return false;
+        }
+        if (email == "") {
+            alert("Email is not filled");
+            return false;
+        }
+        if (username == "") {
+            alert("User Name is not filled");
+            return false;
+        }
+        if (password == "") {
+            alert("Password is not filled");
+            return false;
+        }
+        if (gender == "") {
+            alert("Gender is not filled");
+            return false;
+        }
+        if (religion == "default") {
+            alert("Religion is not filled");
+            return false;
+        }
+        if(address == ""){
+            alert("Adress is not filled");
+            return false;
+        }
+        if(hobbies.length == 0){
+            alert("Hobbies is not filled ");
+            return false;
+        }
+    }
+
+</script>
+
+<body>
+    <header class="flex justify-between h-[100px] bg-gradient-to-r from-[#016fc6] to-[#253c98] px-[100px]">
+        <img class="mt-[30px] ml-[21px] w-[96px] h-[50px]" src="logo_cimory.png" alt="logo cimory">
+        <div class="flex flex-col gap-5" id="navbar-lang">
+            <div class="flex justify-end gap-5 mt-5" id="lang">
+                <div class="h-[15px]">
+                    <img class="w-[15px]" src="share.png" alt="logo share">
+                </div>
+                <div class="h-[15px]">
+                    <a class="text-white font-bold" href="https://cimory.com/index.php?lang=en&">EN</a>
+                </div>                 
+            </div>
+            <div class="flex gap-10" id="navbar">
+                <div>
+                    <a class="text-[#8eb3dd] text-sm hover:text-white" href="index.html">HOME</a>
+                </div>
+                <div>
+                    <a class="text-[#8eb3dd] text-sm hover:text-white" href="biodata.html">BIODATA</a>
+                </div>
+                <div>
+                    <a class="text-[#8eb3dd] text-sm hover:text-white" href="contact_us.html">CONTACT US</a>
+                </div>
+                <div>
+                    <a class="text-[#8eb3dd] text-sm hover:text-white" href="free.html">FREE CONTENT</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Main Section -->
+    <main id="main-contact-us">
+        <div id="contact">
+            <h1>About Us</h1>
+            <img src="hub-dk.jpg" alt="hubungi deca akan membantu">
+            <p>
+                Halo, nama saya Deca. Saya saat ini berkuliah tingkat 3 di Universitas Advent Indonesia. Saya memiliki
+                minat yang kuat dalam pengembangan web.
+                Selama kuliah, saya telah terlibat dalam berbagai kegiatan ekstrakurikuler yang menarik. Saya
+                bersemangat untuk terus belajar dan berkembang di lingkungan universitas,
+                serta berharap dapat berkontribusi dalam berbagai cara selama masa studi saya di UNAI.
+            </p>
+        </div>
+
+        <div id="contact-form">
+            <h1>Contact Us</h1>
+                <form name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
+                <input type="text" id="fullname" name="fullname" placeholder="Your fullname...">
+
+                <input type="email" id="email" name="email" placeholder="Your email...">
+
+                <input type="text" id="username" name="username" placeholder="Username">
+
+                <input type="password" id="password" name="password" placeholder="Password">
+
+                <div id="gender">
+                    <input type="radio" name="gender" id="male" value="Male">
+                    <label for="male">Male</label>
+                    <input type="radio" name="gender" id="female" value="Female">
+                    <label for="female">Female</label>
+                </div>
+
+                <div id="religion-form">
+                    <label for="religion">Religion</label>
+                    <select name="religion" id="religion">
+                        <option value="default">Select Religion</option>
+                        <option value="Islam">Islam</option>
+                        <option value="Christian">Christian</option>
+                        <option value="Hindu">Hindu</option>
+                        <option value="Buddha">Buddha</option>
+                        <option value="Khonghucu">Khonghucu</option>
+                    </select>
+                </div>
+
+                <textarea name="address" id="address"></textarea>
+
+                <div id="hobbies-form">
+                    <p>Hobbies</p>
+                    <div id="hobbies">
+                        <input type="checkbox" id="drawing" name="hobbies[]" value="Drawing">
+                        <label for="drawing">Drawing</label>
+                        <input type="checkbox" id="reading" name="hobbies[]" value="Reading">
+                        <label for="reading">Reading</label>
+                        <input type="checkbox" id="sport" name="hobbies[]" value="Sport">
+                        <label for="sport">Sport</label>
+                        <input type="checkbox" id="music" name="hobbies[]" value="Music">
+                        <label for="music">Music</label>
+                        <input type="checkbox" id="writing" name="hobbies[]" value="Writing">
+                        <label for="writing">writing</label>
+                        <input type="checkbox" id="cooking" name="hobbies[]" value="Cooking">
+                        <label for="cooking">Cooking</label>
+                        <input type="checkbox" id="singing" name="hobbies[]" value="Singing">
+                        <label for="singing">Singing</label>
+                        <input type="checkbox" id="traveling" name="hobbies[]" value="Traveling">
+                        <label for="traveling">Traveling</label>
+                        <input type="checkbox" id="hiking" name="hobbies[]" value="Hiking">
+                        <label for="hiking">Hiking</label>
+                        <input type="checkbox" id="dancing" name="hobbies[]" value="Dancing">
+                        <label for="dancing">Dancing</label>
+                    </div>
+                </div>
+                <button type="submit">Save</button>
+            </form>
+        </div>
+    </main>
+    <!-- Footer -->
+    <footer class="w-full flex flex-col">
+        <div id="konten-footer" class="bg-[#f0f4f5] flex gap-[35px] py-20">
+            <div id="footer-logo" class="w-[20%] flex justify-end">
+                <img class="h-[50px]" src="logo_cimory.png" alt="logo cimory">
+            </div>
+            <div id="konten" class="flex w-[80%] gap-5">
+                <div id="home-keberlanjutan" class="flex flex-col gap-[30px]">
+                    <a href="https://cimory.com/index.php">
+                        <h4 class="text-[#6d6d6e] font-bold">Home</h4>
+                    </a>
+                    <div class="flex flex-col gap-[5px]">
+                        <h4 class="text-[#4b4c4d] font-bold" >Keberlanjutan</h4>
+                        <ul>
+                            <li class="text-[13px]">
+                                <a class="text-[#6d6d6e] hover:text-black" href="https://cimory.com/sustainability.php#tab-1">Energi & Lingkungan</a>
+                            </li>
+                            <li class="text-[13px]">
+                                <a class="text-[#6d6d6e] hover:text-black" href="https://cimory.com/sustainability.php#tab-2">Ekonomi Lokal</a>
+                            </li>
+                            <li class="text-[13px]">
+                                <a class="text-[#6d6d6e] hover:text-black" href="https://cimory.com/sustainability.php#tab-3">Pengembangan Komunitas</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="perusahaan" class="flex flex-col gap-[5px]">
+                    <h4 class="text-[#4b4c4d] font-bold" >Perusahaan</h4>
+                    <ul>
+                        <li class="text-[13px]">
+                            <a class="text-[#6d6d6e] hover:text-black" href="https://cimory.com/vision-mission.php">Visi Misi</a>
+                        </li>
+                        <li class="text-[13px]">
+                            <a class="text-[#6d6d6e] hover:text-black" href="https://cimory.com/our-leadership.php">Kepemimpinan Kami</a>
+                        </li>
+                        <li class="text-[13px]">
+                            <a class="text-[#6d6d6e] hover:text-black" href="https://cimory.com/our-history.php">Sejarah Perusahaan</a>
+                        </li>
+                        <li class="text-[13px]">
+                            <a class="text-[#6d6d6e] hover:text-black" href="https://cimory.com/corporate-governance.php">Tata Kelola Perusahaan</a>
+                        </li>
+                        <li class="text-[13px]">
+                            <a class="text-[#6d6d6e] hover:text-black" href="https://cimory.com/sub-company.php">Grup Perusahaan</a>
+                        </li>
+                        <li class="text-[13px]">
+                            <a class="text-[#6d6d6e] hover:text-black" href="https://cimory.com/development-strategy.php">Pengembangan Strategi</a>
+                        </li>
+                        <li class="text-[13px]">
+                            <a class="text-[#6d6d6e] hover:text-black" href="https://cimory.com/audit-comittee.php">Komite Audit</a>
+                        </li>
+                    </ul>
+                </div>
+                <div id="produk-investor" class="flex flex-col gap-[30px]">
+                    <div class="flex flex-col gap-[5px]">
+                        <h4 class="text-[#4b4c4d] font-bold" >Produk</h4>
+                        <ul>
+                            <li class="text-[13px]">
+                                <a class="text-[#6d6d6e] hover:text-black" href="https://cimory.com/our-product.php#tab-1">Produk Susu</a>
+                            </li>
+                            <li class="text-[13px]">
+                                <a class="text-[#6d6d6e] hover:text-black" href="https://cimory.com/our-product.php#tab-2">Makanan Konsumen</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="flex flex-col gap-[5px]">
+                        <h4 class="text-[#4b4c4d] font-bold" >Investor</h4>
+                        <ul>
+                            <li class="text-[13px]">
+                                <a class="text-[#6d6d6e] hover:text-black" href="https://cimory.com/general-meeting.php">Rapat Umum Tahunan</a>
+                            </li>
+                            <li class="text-[13px]">
+                                <a class="text-[#6d6d6e] hover:text-black" href="https://cimory.com/financial-report.php">Laporan Keuangan</a>
+                            </li>
+                            <li class="text-[13px]">
+                                <a class="text-[#6d6d6e] hover:text-black" href="https://cimory.com/annual-reports.php">Laporan Tahunan</a>
+                            </li>
+                            <li class="text-[13px]">
+                                <a class="text-[#6d6d6e] hover:text-black" href="https://cimory.com/investor-contact.php">Kontak IR</a>
+                            </li>
+                            <li class="text-[13px]">
+                                <a class="text-[#6d6d6e] hover:text-black" href="https://cimory.com/investor-prospectus.php">Prospektus</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="pariwisata-media-kontak" class="flex flex-col gap-[30px]">
+                    <a href="" >
+                        <h4 class="text-[#6d6d6e] font-bold">Pariwisata</h4></a>
+                    <div class="flex flex-col gap-[5px]">
+                        <h4 class="text-[#4b4c4d] font-bold" >Media</h4>
+                        <ul>
+                            <li class="text-[13px]">
+                                <a class="text-[#6d6d6e] hover:text-black" href="https://cimory.com/news.php">Berita</a>
+                            </li>
+                            <li class="text-[13px]">
+                                <a class="text-[#6d6d6e] hover:text-black" href="https://cimory.com/media.php">Media</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="flex flex-col gap-[5px]">
+                        <h4 class="text-[#4b4c4d] font-bold" >Kontak</h4>
+                        <ul>
+                            <li class="text-[13px]">
+                                <a class="text-[#6d6d6e] hover:text-black" href="https://cimory.com/contact-us.php">Alamat</a>
+                            </li>
+                            <li class="text-[13px]">
+                                <a class="text-[#6d6d6e] hover:text-black" href="https://cimory.com/career.php">Karir</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="copyright" class="bg-gradient-to-r from-[#046ac2] to-[#24409d] py-[30px] text-center text-[11px] text-white">
+            <p>&copy; 2021 PT Cisarua Mountain Dairy (Cimory) All rights reserved.</p>
+            <div>
+                <a href="https://unai.edu">UNAI Website </a>
+                &middot;
+                <a href="https://fti.unai.edu"> FTI UNAI</a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
